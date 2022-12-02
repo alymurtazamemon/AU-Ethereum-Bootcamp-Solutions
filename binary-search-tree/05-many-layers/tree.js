@@ -14,7 +14,9 @@ class Tree {
         let newRoot = this.root;
 
         while (true) {
+            // * if data is less then move to left side, else on right side.
             if (node.data < newRoot.data) {
+                // * if there is already a node on left side then it will become a newRoot for search. Else this is the position we have to add a new node.
                 if (newRoot.left != null) {
                     newRoot = newRoot.left;
                 } else {
@@ -22,6 +24,7 @@ class Tree {
                     break;
                 }
             } else {
+                // * if there is already a node on right side then it will become a newRoot for search. Else this is the position we have to add a new node.
                 if (newRoot.right != null) {
                     newRoot = newRoot.right;
                 } else {
